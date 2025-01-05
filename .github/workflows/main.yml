@@ -1,5 +1,5 @@
 name: Input example ## Workflow name
-run_name: Workflow Input example, ran by ${{ github.actor }} # Name when running
+name: Workflow Input example, ran by ${{ github.actor }} # Name when running
 on:
   workflow_dispatch: 
     inputs:
