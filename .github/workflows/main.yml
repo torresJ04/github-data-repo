@@ -15,3 +15,11 @@ jobs:
           echo "action_random=$ACTION_RANDOM" >> $GITHUB_OUTPUT
       - name: Displaying action's output
         run: echo "${{ steps.output-example.outputs.action_random }}"
+      - name: Password Generator
+        id: generatedpassword
+        uses: aammirmirza/RandomPasswordGenerator@v1.1
+        with:
+          length: 15
+      
+      - name: Displaying Password Output
+        run: echo "${{ steps.generatedpassword.outputs.password }}"
